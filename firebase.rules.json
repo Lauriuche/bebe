@@ -1,0 +1,38 @@
+{
+  "rules": {
+    "rifa_master": {
+      "config": {
+        ".read": true,
+        ".write": false
+      },
+      "numeros": {
+        ".read": true,
+        ".write": false
+      },
+      "ganhadores": {
+        ".read": true,
+        ".write": false
+      }
+    },
+    "tenants": {
+      "$tenantId": {
+        "rifas": {
+          "$rifaId": {
+            "config": {
+              ".read": true,
+              ".write": false
+            },
+            "numeros": {
+              ".read": true,
+              ".write": false
+            },
+            "ganhadores": {
+              ".read": true,
+              ".write": false
+            }
+          }
+        }
+      }
+    }
+  }
+}
